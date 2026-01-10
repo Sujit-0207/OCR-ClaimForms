@@ -2,6 +2,8 @@
 
 This Jupyter Notebook provides a complete pipeline to extract structured data from HCFA 1500 (CMS 1500) medical claim forms using Tesseract OCR and OpenAI's LLMs.
 
+**Google Colab** : https://colab.research.google.com/drive/1I0y7zI017VqJ8lhW57KOm5H94JMMf7mH?usp=sharing
+
 ##  Features
 - **OCR Engine**: Utilizes Tesseract for high-quality text and layout extraction.
 - **AI Extraction**: Uses GPT-4o to parse messy OCR output into structured JSON.
