@@ -1,0 +1,29 @@
+{
+    "document_type": "Receipt",
+    "extracted_data": {
+        "merchant_name": "WAL*MART SUPERCENTER",
+        "phone_number": "(515) 986-1783",
+        "store_number": "5748",
+        "operator_id": "00000158",
+        "terminal_id": "14",
+        "transaction_number": "03178",
+        "items": [
+            {
+                "description": "BANANAS",
+                "sku": "00000000401",
+                "weight": "0.41 lb",
+                "unit_price": "0.49",
+                "price": "0.20"
+            },
+            {
+                "description": "FRAP",
+                "sku": "001200010451",
+                "price": "5.48"
+            }
+        ],
+        "discount_given": "0.57",
+        "subtotal": "5.11",
+        "cash_tendered": "11.00",
+        "change_due": "5.89"
+    }
+}
