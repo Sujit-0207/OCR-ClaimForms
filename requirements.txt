@@ -1,0 +1,7 @@
+python-dotenv
+google-genai
+Pillow
+pytesseract
+pypdf
+pdf2image
+python-docx
