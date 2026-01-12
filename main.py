@@ -18,7 +18,6 @@ load_dotenv()
 # NOTE: You must have Tesseract-OCR installed on your system and in your PATH.
 # If not in PATH, uncomment and set the path below:
 # pytesseract.pytesseract.tesseract_cmd = r'path to tesseract.exe'
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\sujit\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 def get_text_from_image(image_path: str) -> str:
     """Extracts text from an image using Pytesseract."""
