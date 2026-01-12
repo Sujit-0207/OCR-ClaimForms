@@ -1,0 +1,16 @@
+{
+    "form_type": "CMS-1500",
+    "patient_name": "Johnson, Emily A.",
+    "insured_name": "Johnson, Mark D.",
+    "diagnosis_codes": [
+        "H52.4",
+        "M45",
+        "R07.9"
+    ],
+    "service_lines": [
+        {
+            "cpt_code": "99213",
+            "charges": "120.00"
+        }
+    ]
+}
