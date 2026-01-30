@@ -50,13 +50,14 @@ Run the script from the command line by providing the path to your document.
 
 ```bash
 # For an Image
-python extract_claim_data.py data/receipt.jpg
+python main.py data/receipt.jpg
 
 # For a PDF
-python extract_claim_data.py data/invoice.pdf --output my_invoice.json
+python main.py data/invoice.pdf --output my_invoice.json
 ```
 
 ### Arguments
 
 - `file_path` (Required): Path to the input file.
 - `--output`, `-o`: (Optional) Custom path for the output JSON file. If not provided, it saves as `<filename>_extracted.json` in the same directory.
+
