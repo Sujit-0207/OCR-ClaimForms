@@ -1,0 +1,278 @@
+{
+    "insured_id": [
+        740,
+        229,
+        1145,
+        254
+    ],
+    "patient_name": [
+        46,
+        274,
+        436,
+        298
+    ],
+    "patient_dob_month": [
+        467,
+        283,
+        492,
+        302
+    ],
+    "patient_dob_day": [
+        506,
+        283,
+        534,
+        301
+    ],
+    "patient_dob_year": [
+        549,
+        282,
+        592,
+        299
+    ],
+    "patient_gender_male": [
+        615,
+        282,
+        635,
+        299
+    ],
+    "patient_gender_female": [
+        685,
+        277,
+        705,
+        299
+    ],
+    "patient_city": [
+        46,
+        371,
+        386,
+        389
+    ],
+    "patient_state": [
+        398,
+        373,
+        433,
+        392
+    ],
+    "patient_zip": [
+        48,
+        422,
+        214,
+        442
+    ],
+    "patient_phone": [
+        227,
+        419,
+        437,
+        442
+    ],
+    "insured_name": [
+        740,
+        277,
+        1150,
+        299
+    ],
+    "patient_address": [
+        46,
+        323,
+        435,
+        342
+    ],
+    "patient_relationship_to": [
+        452,
+        323,
+        724,
+        352
+    ],
+    "insured_address": [
+        740,
+        322,
+        1147,
+        349
+    ],
+    "insured_city": [
+        740,
+        371,
+        1051,
+        392
+    ],
+    "insured_state": [
+        1075,
+        371,
+        1130,
+        394
+    ],
+    "insured_zip": [
+        738,
+        421,
+        898,
+        445
+    ],
+    "insured_phone": [
+        919,
+        418,
+        1151,
+        443
+    ],
+    "policy_number": [
+        740,
+        464,
+        1147,
+        491
+    ],
+    "insurance_plan_name": [
+        739,
+        606,
+        1150,
+        632
+    ],
+    "insured_dob_month": [
+        774,
+        515,
+        808,
+        539
+    ],
+    "insured_dob_day": [
+        815,
+        520,
+        848,
+        539
+    ],
+    "insured_dob_year": [
+        853,
+        520,
+        921,
+        542
+    ],
+    "insured_gender_male": [
+        983,
+        518,
+        1006,
+        541
+    ],
+    "insured_gender_female": [
+        1084,
+        518,
+        1106,
+        544
+    ],
+    "patient_signature": [
+        108,
+        742,
+        461,
+        768
+    ],
+    "signature_date": [
+        535,
+        746,
+        719,
+        770
+    ],
+    "insured_signature": [
+        808,
+        744,
+        1146,
+        770
+    ],
+    "ICD_indicator": [
+        616,
+        920,
+        644,
+        947
+    ],
+    "diagnosisCodes": [
+        39,
+        938,
+        727,
+        1011
+    ],
+    "from_date_of_service": [
+        18,
+        1061,
+        160,
+        1341
+    ],
+    "to_date_of_service": [
+        162,
+        1061,
+        288,
+        1342
+    ],
+    "CPT/HCPCS_codes": [
+        376,
+        1061,
+        477,
+        1338
+    ],
+    "Modifiers": [
+        478,
+        1059,
+        656,
+        1338
+    ],
+    "diagnosis_pointers": [
+        659,
+        1062,
+        728,
+        1339
+    ],
+    "charges": [
+        732,
+        1066,
+        856,
+        1341
+    ],
+    "days_or_units": [
+        856,
+        1064,
+        911,
+        1338
+    ],
+    "NPI": [
+        981,
+        1061,
+        1156,
+        1341
+    ],
+    "fedTex_id": [
+        38,
+        1360,
+        254,
+        1386
+    ],
+    "patient_ac_no": [
+        347,
+        1360,
+        552,
+        1389
+    ],
+    "accept_assignment": [
+        556,
+        1358,
+        716,
+        1387
+    ],
+    "total_charge": [
+        748,
+        1358,
+        879,
+        1386
+    ],
+    "amount_paid": [
+        908,
+        1362,
+        1021,
+        1386
+    ],
+    "physician_signature": [
+        36,
+        1445,
+        342,
+        1474
+    ],
+    "service_facility_location": [
+        348,
+        1410,
+        725,
+        1480
+    ]
+}
