@@ -14,8 +14,6 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-from paddleocr import PaddleOCR
-
 # ==========================================================
 # CONFIGURATION
 # ==========================================================
@@ -26,12 +24,6 @@ logging.basicConfig(
 )
 load_dotenv()
 
-USE_GPU = torch.cuda.is_available()
-
-# Initialize PaddleOCR (one-time setup)
-# lang='en' for English documents
-logging.info("Initializing PaddleOCR (use_gpu=%s)...", USE_GPU)
-ocr_engine = PaddleOCR(use_angle_cls=True, lang='en', use_gpu=USE_GPU, show_log=False)
 
 # ==========================================================
 # FILE CONVERSION & EXTRACTION
@@ -67,8 +59,6 @@ def extract_text_from_docx(docx_path):
 # ==========================================================
 
 def correct_orientation(image):
-    # PaddleOCR has built-in angle classification, but we can keep this 
-    # as an optional pre-processing step if Tesseract is installed.
     try:
         osd = pytesseract.image_to_osd(image)
         angle = int(osd.split("Rotate: ")[1].split("\n")[0])
@@ -100,21 +90,13 @@ def deskew(image):
     return image
 
 def process_single_image(image):
-    """Processes a single image (page) using PaddleOCR."""
+    """Processes a single image (page) using Tesseract OCR."""
     # Optional pre-processing
     image = correct_orientation(image)
     image = deskew(image)
     
-    logging.info("Running PaddleOCR detection and recognition...")
-    # PaddleOCR takes numpy array (BGR)
-    result = ocr_engine.ocr(image, cls=True)
-    
-    page_text = ""
-    if result and result[0]:
-        for line in result[0]:
-            # line structure: [ [ [x1,y1], [x2,y2], ... ], (text, confidence) ]
-            text = line[1][0]
-            page_text += text + " "
+    logging.info("Running Tesseract OCR detection and recognition...")
+    page_text = pytesseract.image_to_string(image)
             
     return page_text.strip()
 
@@ -127,31 +109,14 @@ def structure_with_gemini(text, filename):
     client = genai.Client()
 
     system_prompt = """
-    You are a professional medical data extractor. Your task is to extract specific fields from the provided medical claim form text.
+    You are a professional medical data extractor. Your task is to extract all the fields from the provided medical claim form text.
     
-    Extract the following fields accurately:
-    1. Patient Name
-    2. Member Id
-    3. Provider Name
-    4. Date of Service (format as YYYY-MM-DD or as found)
-    5. Diagnosis code (ICD-10 or similar)
-    6. Procedure code (CPT/HCPCS)
-    7. Charge amount (numeric value only)
+    Extract every single field and its value present in the input file text (strictly same values as of input file, no hallucinated or guessed values).
 
     Instructions:
-    - If a field is not found, leave it as null.
-    - If multiple values exist (e.g., multiple procedure codes), return them as a list.
-    - Return the data in a valid JSON format with the following keys:
-      {
-        "patient_name": "...",
-        "member_id": "...",
-        "provider_name": "...",
-        "date_of_service": "...",
-        "diagnosis_codes": [...],
-        "procedure_codes": [...],
-        "total_charge": 0.0 (verify the value by summing up the charge amounts),
-        "raw_summary": "Short summary of the claim"
-      }
+    - If a field is not found, leave it out.
+    - If multiple values exist for a field, return them as a list.
+    - Return the data in a valid JSON format as a flat or nested dictionary.
     """
 
     try:
@@ -187,7 +152,21 @@ def main_pipeline(file_path):
             full_text = "\n".join(results)
     elif ext == ".docx":
         full_text = extract_text_from_docx(file_path)
-    elif ext in [".png", ".jpg", ".jpeg", ".tif", ".tiff"]:
+    elif ext in [".tif", ".tiff"]:
+        logging.info("Processing TIFF image (potentially multipage): %s", file_path)
+        try:
+            img = Image.open(file_path)
+            results = []
+            for i in range(getattr(img, 'n_frames', 1)):
+                img.seek(i)
+                frame = np.array(img.convert('RGB'))
+                cv_img = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+                logging.info("Processing TIFF page %d", i+1)
+                results.append(process_single_image(cv_img))
+            full_text = "\n".join(results)
+        except Exception as e:
+            logging.error("Failed to process TIFF %s: %s", file_path, e)
+    elif ext in [".png", ".jpg", ".jpeg"]:
         logging.info("Processing single image: %s", file_path)
         image = cv2.imread(file_path)
         if image is not None:
@@ -219,8 +198,8 @@ def main_pipeline(file_path):
         # Flatten lists for CSV if necessary or just store as string
         data_for_df = structured_data.copy()
         for k, v in data_for_df.items():
-            if isinstance(v, list):
-                data_for_df[k] = "; ".join(map(str, v))
+            if isinstance(v, (list, dict)):
+                data_for_df[k] = json.dumps(v)
         
         df = pd.DataFrame([data_for_df])
         df.to_csv(csv_path, index=False)
@@ -232,7 +211,7 @@ def main_pipeline(file_path):
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description="Universal Medical Claim Form Extractor using PaddleOCR and Gemini")
+    parser = argparse.ArgumentParser(description="Universal Medical Claim Form Extractor using Tesseract and Gemini")
     parser.add_argument("input", help="Path to an input file (PDF, DOCX, Image) or a directory containing files")
     
     args = parser.parse_args()
