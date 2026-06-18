@@ -1,0 +1,73 @@
+{
+    "document_type": "Receipt",
+    "extracted_data": {
+        "store_name": "TRADER JOE'S",
+        "store_address": "2001 Greenville Ave\nDallas TX 75206",
+        "store_number": "403",
+        "store_phone": "(469) 334-0614",
+        "store_hours": "OPEN 8:00AM TO 9:00PM DAILY",
+        "store_website": "www.traderjoes.com",
+        "date": "06-28-2014",
+        "time": "12:34PM",
+        "total_items": 22,
+        "transaction_identifier": "Higgins, Ryan",
+        "line_items": [
+            {
+                "description": "R-CARROTS SHREDDED 10 OZ"
+            },
+            {
+                "description": "R-CUCUMBERS PERSIAN 1 LB"
+            },
+            {
+                "description": "TOMATOES CRUSHED NO SALT"
+            },
+            {
+                "description": "TOMATOES WHOLE NO SALT W/BASIL"
+            },
+            {
+                "description": "ORGANIC OLD FASHIONED OATMEAL"
+            },
+            {
+                "description": "MINI-PEARL TOMATOES"
+            },
+            {
+                "description": "PKG SHREDDED MOZZARELLA LITE T"
+            },
+            {
+                "description": "EGGS 1 002 ORGANIC BROWN"
+            },
+            {
+                "description": "BEANS GARBANZO"
+            },
+            {
+                "description": "SPROUTED CA STYLE"
+            },
+            {
+                "description": "A-AVOCADOS HASS BAG 4CT"
+            },
+            {
+                "description": "A-APPLE BAG JAZZ 2 LB"
+            },
+            {
+                "description": "A-PEPPER BELL EACH XL RED"
+            },
+            {
+                "description": "ITEM 3FA",
+                "unit_price": 0.29,
+                "quantity": 1
+            },
+            {
+                "description": "CREAMY SALTED PEANUT BUT TER"
+            },
+            {
+                "description": "WHL WHT PITA BREAD",
+                "quantity": 2,
+                "unit_price": 0.69
+            }
+        ],
+        "subtotal": 38.68,
+        "total": 38.68,
+        "cash_paid": 40.0,
+        "change_due": 1.32
+    }
+}

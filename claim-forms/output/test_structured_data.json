@@ -1,0 +1,9 @@
+{
+    "markdown_table": "Filename | form type | Accept assignment | Amount Paid or Total Charges\n---|---|---|---\ntest.jpeg | UB-04 | Yes | 307.00",
+    "extracted_fields": {
+        "filename": "test.jpeg",
+        "form_type": "UB-04",
+        "accept_assignment": "Yes",
+        "amount_paid_or_total_charges": "307.00"
+    }
+}

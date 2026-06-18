@@ -1,0 +1,12 @@
+python-dotenv
+google-genai
+Pillow
+pytesseract
+pymupdf
+python-docx
+imutils
+opencv-python
+pandas
+pdf2image
+paddleocr
+paddlepaddle

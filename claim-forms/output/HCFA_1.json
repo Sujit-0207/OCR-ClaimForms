@@ -1,0 +1,70 @@
+{
+    "document_type": "Health Insurance Claim Form (CMS-1500)",
+    "extracted_data": {
+        "carrier": {
+            "name": "BlueCross BlueShield of Texas",
+            "address": "P.O. Box 660044"
+        },
+        "patient_information": {
+            "name": "Powers, Billy H.",
+            "birth_date": "01/20/1988",
+            "sex": "Male",
+            "address": {
+                "street": "123 Super Power Lane",
+                "city": "Austin",
+                "state": "TX",
+                "zip_code": "78705"
+            },
+            "telephone": "(512) 123-4567",
+            "relationship_to_insured": "Self"
+        },
+        "insured_information": {
+            "id_number": "1234567890",
+            "name": "Powers, Billy H.",
+            "policy_group_or_feca_number": "601578",
+            "plan_name": "BlueCross BlueShield of Texas",
+            "another_health_benefit_plan": false
+        },
+        "claim_information": {
+            "condition_related_to": {
+                "employment": false,
+                "auto_accident": false,
+                "other_accident": false
+            },
+            "diagnosis_codes": [
+                "F50.2",
+                "F41.1"
+            ],
+            "services": [
+                {
+                    "date_from": "01/31/2023",
+                    "date_to": "01/31/2023",
+                    "place_of_service": "11",
+                    "procedure_code": "90837",
+                    "diagnosis_pointer": "A",
+                    "charges": 185.0,
+                    "rendering_provider_id": "9249674328"
+                }
+            ],
+            "federal_tax_id": "87-12345678",
+            "patient_account_no": "BP1120",
+            "assignment_accepted": true,
+            "total_charge": 185.0,
+            "amount_paid": 185.0
+        },
+        "billing_provider_information": {
+            "name": "Austin Eating Disorder Care",
+            "address": "9056 Austin Lane, Austin, TX 78705",
+            "telephone": "(512) 987-6543",
+            "npi": "9243674328"
+        },
+        "physician_or_supplier_signature": {
+            "name": "Wanda Williams, LPC",
+            "date": "02/06/2023"
+        },
+        "patient_signature": {
+            "name": "Billy H. Powers",
+            "date": "02/06/2023"
+        }
+    }
+}

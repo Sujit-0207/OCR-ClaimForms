@@ -1,0 +1,140 @@
+{
+    "insured_id": {
+        "value": "1234567890"
+    },
+    "patient_name": {
+        "value": "Powers, Billy H."
+    },
+    "patient_dob_month": {
+        "value": "11"
+    },
+    "patient_dob_day": {
+        "value": "20"
+    },
+    "patient_dob_year": {
+        "value": "88"
+    },
+    "patient_gender_male": {
+        "value": "x"
+    },
+    "patient_gender_female": {
+        "value": "\u2014"
+    },
+    "patient_city": {
+        "value": "Austin"
+    },
+    "patient_state": {
+        "value": "TX"
+    },
+    "patient_zip": {
+        "value": "78705"
+    },
+    "patient_phone": {
+        "value": "( 512 ) 123-4567"
+    },
+    "insured_name": {
+        "value": "Powers, Billy H."
+    },
+    "patient_address": {
+        "value": "123 Super Power Lane"
+    },
+    "patient_relationship_to": {
+        "value": ""
+    },
+    "insured_address": {
+        "value": "123 Super Power Lane"
+    },
+    "insured_city": {
+        "value": "Austin"
+    },
+    "insured_state": {
+        "value": "TX"
+    },
+    "insured_zip": {
+        "value": "78705"
+    },
+    "insured_phone": {
+        "value": "{ 512 ) 123-4567"
+    },
+    "policy_number": {
+        "value": "601578"
+    },
+    "insurance_plan_name": {
+        "value": "BlueCross BlueShield of Texas"
+    },
+    "insured_dob_month": {
+        "value": "11"
+    },
+    "insured_dob_day": {
+        "value": "20"
+    },
+    "insured_dob_year": {
+        "value": "\u2014 88"
+    },
+    "insured_gender_male": {
+        "value": "x"
+    },
+    "insured_gender_female": {
+        "value": "|"
+    },
+    "patient_signature": {
+        "value": "Billy H. Powers"
+    },
+    "signature_date": {
+        "value": "02/06/2023"
+    },
+    "insured_signature": {
+        "value": "Billy Powers"
+    },
+    "ICD_indicator": {
+        "value": "10"
+    },
+    "diagnosisCodes": {
+        "value": "mee : a\u201c : 7 ; on"
+    },
+    "from_date_of_service": {
+        "value": ": a1 sl 28"
+    },
+    "to_date_of_service": {
+        "value": "oOo st 28"
+    },
+    "CPT/HCPCS_codes": {
+        "value": "90837"
+    },
+    "Modifiers": {
+        "value": ""
+    },
+    "diagnosis_pointers": {
+        "value": "A"
+    },
+    "charges": {
+        "value": "~"
+    },
+    "days_or_units": {
+        "value": "| 1"
+    },
+    "NPI": {
+        "value": "9249674928"
+    },
+    "fedTex_id": {
+        "value": "87-12345678"
+    },
+    "patient_ac_no": {
+        "value": "BP1120"
+    },
+    "accept_assignment": {
+        "value": ""
+    },
+    "total_charge": {
+        "value": "185.00."
+    },
+    "amount_paid": {
+        "value": "185.00"
+    },
+    "physician_signature": {
+        "value": "Wanda Williams, LPC"
+    },
+    "service_facility_location": {
+        "value": "ssnine -"
+    }
+}
